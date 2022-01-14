@@ -1,0 +1,79 @@
+body {
+    background-image: url(images/skybkrnd.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: right;
+
+
+}
+
+.navlist a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navlist-right {
+    float: right;
+}
+
+.navlist a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.button {
+    border: none;
+    padding: 1em 2em;
+    width: 20px;
+    border-radius: 20px;
+    height: 20px;
+}
+
+.donutBtn {
+    /* display:none; */
+    position: fixed;
+    z-index: 1;
+    left: 100;
+    top: 100;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.donut-content {
+    background-color: yellow;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+
+}
+.closeBtn{
+    color: yellow;
+    float: right;
+    font-size: 30px;
+}
