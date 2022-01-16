@@ -1,15 +1,25 @@
-class DonutMaker {
+const donutCount = document.querySelector(".donutCount");
 
-    constructor(donut, price){
-    this.donut = donut;
-    this.price = price;
+
+class DonutClicker{
+
+    constructor() {
+        this.donutCount = 0;
+    }
+
+    getDonutCount() {
+        return this.donutCount;
+    }
+
+    bakeDonut() {
+        this.donutCount += 1;
+    }
+
+
+
+
+
+
+
 }
-
-donutClick(){
-  
-    this.donutsMade +=1;
-}
-
-}
-
-export default DonutMaker;
+export default DonutClicker;
