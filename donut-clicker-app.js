@@ -33,7 +33,7 @@ autoCntDisp.innerText = donutClicker.autoClickCount;
     
     });
  
-  multiBtn.addEventListener('click', () =>{
+  buyMultiplier.addEventListener('click', () =>{
       
     donutClicker.buyMultiplier();
   

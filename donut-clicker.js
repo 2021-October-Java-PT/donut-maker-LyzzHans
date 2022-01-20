@@ -38,17 +38,17 @@ class DonutClicker{
     }
 
 buyAutoClicker() {
-  if (this.donutCount >= this.autoClickPrice) {
-    this.donutCount -= this.autoClickPrice;
-    this.autoClickCount += 1;
-    this.autoClickPrice = (this.autoClickCount * 100);
+  if (this.donutCount >= this.autoClicksCost) {
+    this.donutCount -= this.autoClicksCost;
+    this.autoClicks += 1;
+    this.autoClicksCost = (this.autoClicks * 100);
   }
 }
 buyMultiplier() {
-  if (this.donutCount >= this.multiplierPrice) {
-    this.donutCount -= this.multiplierPrice;
+  if (this.donutCount >= this.multiplierCost) {
+    this.donutCount -= this.multiplierCost;
     this.multiplierCount += 1;
-    this.multiplierPrice = (this.multiplierCount * 50);
+    this.multiplierCost = (this.multiplierCount * 10);
 }
 }
 }
