@@ -19,10 +19,7 @@ const donutClicker = new DonutClicker(0,0,100,1,0,10);
 
 
 
-console.log('check in 1');
 donutBtn.addEventListener('click', () => {
-
-console.log('check in 2');
   donutClicker.bakeDonut();
   donutCntDisp.innerText = donutClicker.donutCount;
 console.log(donutClicker.donutCount);
@@ -44,12 +41,7 @@ autoCntDisp.innerText = donutClicker.autoClickCount;
   autoCntDisplay.innerText = donutClicker.autoClickCount;
   multiCntDisplay.innerText = donutClicker.multiplierCount;
 });
- autoClickBtn.addEventListener('click', () =>{
-  for (let i = 0; i < donut.autoClicks; i++) {
-    donutClicker.bakeDonut();
-  }
-  donutClicker.donutCount();
-});
+
   resetBtn.addEventListener("click", () => {
     location.reload();
 

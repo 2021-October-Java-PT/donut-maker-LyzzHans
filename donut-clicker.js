@@ -13,24 +13,43 @@ class DonutClicker{
        
        
     }
+    getDonutCount() {
+      return this.donutCount;
+    }
+    getAutoClicks() {
+      return this.autoClicks;
+    }
 
+    getAutoClicksCost(){
+      return this.autoClicksCost;
+    }
+    getMultiplier(){
+      return this.multiplier;
+    }
+    getMultiplierCount(){
+      return this.multiplierCount;
+    }
+    getMultiplierCost(){
+      return this.multiplierCost;
+    }
+  
     bakeDonut() {
         this.donutCount += this.multiplier;
     }
 
 buyAutoClicker() {
-  this.donutCount = Math.round(this.donutCount - this.autoClicksCost);
-  this.autoClicks += 1;
+  if (this.donutCount >= this.autoClickPrice) {
+    this.donutCount -= this.autoClickPrice;
+    this.autoClickCount += 1;
+    this.autoClickPrice = (this.autoClickCount * 100);
+  }
 }
 buyMultiplier() {
-  this.donutCount = Math.round(this.count - this.multiplierCost);
-  this.multiplier = this.multiplier * 1.2;
-  this.multiplierCount += 1;
+  if (this.donutCount >= this.multiplierPrice) {
+    this.donutCount -= this.multiplierPrice;
+    this.multiplierCount += 1;
+    this.multiplierPrice = (this.multiplierCount * 50);
 }
 }
-
-reset() 
-  location.reload;
-
-
+}
 export default DonutClicker;
