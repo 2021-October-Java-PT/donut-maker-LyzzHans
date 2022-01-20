@@ -1,14 +1,14 @@
-const donutCount = document.querySelector(".donutCount");
-
-
+// const donutCount = document.querySelector(".donutCount");
+const donutCntDisp = document.querySelector(".donutCount");
+const autoCostDisp = document.querySelector('#autoCostDisp');
 class DonutClicker{
 
-    constructor() {
-        this.donutCount = 0;
-        this.autoClicks = 0;
-        this.autoClicksCost = 100;
-        this.multiplierCount = 0;
-        this.multiplierCost = 10;
+    constructor(donutCount, autoClicks, autoClicksCost, multiplier, multiplierCost) {
+        this.donutCount = donutCount;
+        this.autoClicks = autoClicks;
+        this.autoClicksCost = autoClicksCost;
+        this.multiplierCount = multiplier;
+        this.multiplierCost = multiplierCost;
  
        
     }
@@ -25,44 +25,43 @@ class DonutClicker{
     getMultiplier(){
       return this.multiplier;
     }
-    getMultiplierCount(){
-      return this.multiplierCount;
-    }
     getMultiplierCost(){
       return this.multiplierCost;
     }
-  getClickInc(){
-    return this.clickInc;
-  }
-    bakeDonut() {
-        if (this.multiplierCount === 0){
-          this.donutCount += 1;
-        }else{
-          this.donutCount =+ Math.pow(1.2, this.multiplierCount);
-        }
-        }
-    
+
   
+    bakeDonut() {
+      this.donutCount++;
+        // if (this.multiplierCount <= 0){
+        //   this.donutCount += 1;
+        // }else{
+        //   this.donutCount =+ Math.pow(1.2, this.multiplierCount);
+        // }
+         }
+        
+        
 buyAutoClicker() {
   if (this.donutCount >= this.autoClicksCost) {
-    { this.donutCount -= this.autoClicksCost;
+     this.donutCount -= this.autoClicksCost;
       this.autoClicksCost = this.autoClicksCost * 1.2;
       this.autoClicks += 1;
-      }  
+      
       
     }
 
   }
 
 autoClickFunction() {
-  if (this.autoClicks === 0) {
-  } else if (this.multiplierCount === 0 && this.autoClicks >= 1) {
-    this.donutCount += this.autoClicks * 2;
-  } else {
-    this.donutCount += Math.pow(1.2, this.multiplierCount) * this.autoClicks;
+  if (this.autoClicks >= 1) {
+    setInterval(() => {
+      console.log(this.donutCount);
+      this.donutCount += (1 * this.autoClicks);
+      autoCostDisp.innerText = this.autoClicksCost;
+      donutCntDisp.innerText = this.donutCount;
+    }, 1000);
   }
-
 }
+
 
 buyMultiplier() {
 
@@ -70,10 +69,8 @@ buyMultiplier() {
     this.donutCount -= this.multiplierCost;
     this.donutCount += Math.pow(1.2, this.multiplierCount) * this.autoClicks;
   }
-    
-  }
 }
-
+  }
 
 
 
