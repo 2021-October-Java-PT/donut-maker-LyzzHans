@@ -7,10 +7,9 @@ class DonutClicker{
         this.donutCount = 0;
         this.autoClicks = 0;
         this.autoClicksCost = 100;
-        this.multiplier = 1;
         this.multiplierCount = 0;
         this.multiplierCost = 10;
-       
+        this.clickInc = 1;
        
     }
     getDonutCount() {
@@ -32,24 +31,48 @@ class DonutClicker{
     getMultiplierCost(){
       return this.multiplierCost;
     }
-  
+  getClickInc(){
+    return this.clickInc;
+  }
     bakeDonut() {
-        this.donutCount += this.multiplier;
-    }
-
+        if (this.multiplierCount === 0){
+          this.donutCount += 1;
+        }else{
+          this.donutCount =+ Math.pow(1.2, this.multiplierCount);
+        }
+        }
+    
+  
 buyAutoClicker() {
   if (this.donutCount >= this.autoClicksCost) {
-    this.donutCount -= this.autoClicksCost;
-    this.autoClicks += 1;
-    this.autoClicksCost = (this.autoClicks * 100);
+    { this.donutCount -= this.autoClicksCost;
+      this.autoClicksCost = this.autoClicksCost * 1.1;
+      this.autoClicks += 1;
+      }  
+    }
+
   }
+
+autoClickFunction() {
+  if (this.autoClicks === 0) {
+  } else if (this.multiplierCount === 0 && this.autoClicks >= 1) {
+    this.donutCount += this.autoClicks * 1;
+  } else {
+    this.donutCount += Math.pow(1.2, this.multiplierCount) * this.autoClicks;
+  }
+
 }
+
 buyMultiplier() {
+
   if (this.donutCount >= this.multiplierCost) {
     this.donutCount -= this.multiplierCost;
     this.multiplierCount += 1;
-    this.multiplierCost = (this.multiplierCount * 10);
+    this.clickInc = this.clickInc * 1.2;
+  }
 }
 }
-}
+
+
+
 export default DonutClicker;

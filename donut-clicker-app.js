@@ -11,12 +11,12 @@ function bakeDonut(){
 
 
 const donutBtn = document.querySelector('#bakeDonut');
-const buyAutoClicker =document.querySelector("#buyAutoClicker");
+const buyAutoClicker =document.querySelector('#buyAutoClicker');
 const donutCntDisp = document.querySelector('#donutCntr');
-const multiBtn = document.querySelector('#multiplierBtn');
+const buyMultiplier = document.querySelector('#multiplierBtn');
 const resetBtn = document.querySelector('#reset-btn');
-const donutClicker = new DonutClicker(0,0,100,1,0,10);
-
+const donutClicker = new DonutClicker(0,0,100,0,10,1);
+const autoCntDisp = document.querySelector('#autoCntr');
 
 
 donutBtn.addEventListener('click', () => {
@@ -25,20 +25,22 @@ donutBtn.addEventListener('click', () => {
 console.log(donutClicker.donutCount);
 });
 
+
 buyAutoClicker.addEventListener("click", () => {
-  
-donutClicker.buyAutoClicker();
-donutCntDisp.innerText = donutClicker.donutCount;
-autoCntDisp.innerText = donutClicker.autoClickCount;
+  donutClicker.buyAutoClicker();
+
+  autoCntDisp.innerText = donutClicker.autoClicksCount;
     
-    });
+   });
  
   buyMultiplier.addEventListener('click', () =>{
       
     donutClicker.buyMultiplier();
+
+
   
   donutCntDisplay.innerText = donutClicker.donutCount;
-  autoCntDisplay.innerText = donutClicker.autoClickCount;
+  autoCntDisplay.innerText = donutClicker.autoClicksCount;
   multiCntDisplay.innerText = donutClicker.multiplierCount;
 });
 
