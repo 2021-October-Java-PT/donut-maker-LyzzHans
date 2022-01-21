@@ -15,9 +15,9 @@ const buyAutoClicker =document.querySelector('#buyAutoClicker');
 const donutCntDisp = document.querySelector('#donutCntr');
 const buyMultiplier = document.querySelector('#multiplierBtn');
 const resetBtn = document.querySelector('#reset-btn');
-const donutClicker = new DonutClicker(0,0,100,0,10);
+const donutClicker = new DonutClicker(100,0,100,0,10);
 const autoCntDisp = document.querySelector('#autoCntr');
-
+const autoCostDisp = document.querySelector('#autoCostDisp');
 
 donutBtn.addEventListener('click', () => {
   donutClicker.bakeDonut();
@@ -28,8 +28,11 @@ console.log(donutClicker.donutCount);
 
 buyAutoClicker.addEventListener("click", () => {
   donutClicker.buyAutoClicker();
-  donutClicker.autoClickFunction;
+donutClicker.autoClickFunction();
+donutCntDisp.innerText = donutClicker.donutCount;
   autoCntDisp.innerText = donutClicker.autoClicks;
+  autoCostDisp.innerText = donutClicker.autoClicksCost;
+  console.log(donutClicker.donutCount);
     
    });
  
