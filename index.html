@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="styles.css">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> -->
-<head>
-  <body>
-    <main>
-    <div class="container">
-  <title>Donut Clicker</title>
-</head>
-<header class='Fred'>
-  <h1>Fred the Baker Baking Company</h1>
-    <h2>Let's get baking!</h2>
-
-</header>
-    <h1>Donut Maker</h1>
-    <section class="counter">
- <!-- <div id="countDonuts"> -->
-   <h3>Donut Count <span id="donutCntr">0</span></h3>   -->
-<!-- </div> -->
-   </section>
-<section class="buttons-section">
-
-<button id="bakeDonut"><img src=/images/blueDonut.png height = "40" width="50"></button>
-
-<button id="reset-btn">reset</button>
-
-</section>
-<section class="boosts">
-
-  <button id="buyAutoClicker"><img src=/images/autoClickBtn.png ></button>
-  <div id="autoCnt"><h3> AutoClickers: <span id="autoCntr">0</span></h3>  
- 
-  <div id="buyMultiplier"><h3>Multiplier <span id="multiplierBtn">0</span></h3>  
-
-  <button id="buyMultiplier"><img src=/images/multBtn.png ></button>
-</section>
-
-<div class="navbar" id="myNavBar">
-  
-  <a href="#About">About</a>
-  <a href="#Inspiration">Inspiration</a>
-  <a href="#Contact">Contact</a>
-
-</div>
-    <script src="./donut-clicker-app.js"></script>
-</container>
-
-</main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Donut Clicker</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+            <header class='Fred'>
+                <h1>
+                Fred the Baker Baking Company
+                </h1>
+                <div>
+                Let's get baking!
+                </div>
+            </header>  
+            <section class="counter">
+                <div class="">Donut Maker</div>
+                <div id="countDonuts">
+                <h3>Donut Count 
+                    <span id="donutCntr">0</span>
+                </h3>  
+                </div>
+            </section>
+            <section class="buttons-section">
+                <button id="bakeDonut">
+                <img src=/images/blueDonut.png height = "40" width="50">
+                </button>
+                <button id="reset-btn">
+                reset
+                </button>
+            </section>
+            <section class="boosts">
+                <button id="buyAutoClicker">
+                <img src=/images/autoClickBtn.png >
+                </button>
+                <div id="buyAutoClicker">
+                <h3> AutoClickers: 
+                    <span id="autoClickBtn">
+                    0
+                    </span>
+                </h3>
+                </div>
+                <div id="buyMultiplier">
+                <h3>Multiplier 
+                    <span id="multiplierBtn">
+                    0
+                    </span>
+                </h3>  
+                <button id="buyMultiplier">
+                <img src=/images/multBtn.png >
+                </button>
+            </section>
+            <div class="navbar" id="myNavBar">
+                <a href="#About">
+                About
+                </a>
+                <a href="#Inspiration">
+                Inspiration
+                </a>
+                <a href="#Contact">
+                Contact
+                </a>
+            </div>
+            <script src="./donut-clicker-app.js"></script>
+            </div>
+        </main>
+    </body>
 </html>
