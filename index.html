@@ -3,54 +3,81 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css">
- <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> 
-<head>
-  <body>
-    <main>
-    <div class="container">
-  <title>Donut Clicker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
-<header class='Fred'>
-  <h1>Fred the Baker Baking Company</h1>
-    <h2>Let's get baking!</h2>
 
-</header>
-    <h1>Donut Maker</h1>
-    <section class="counter">
- <!-- <div id="countDonuts"> -->
-   <h3>Donut Count <span id="donutCount">0</span></h3> 
-<!-- </div> -->
-   </section>
-<section class="buttons-section">
+<body>
 
-<button id="bakeDonut"><img src=/images/blueDonut.png height = "40" width="50"></button>
+  <header>
+    <nav>
+      <button id="about">About the Baker</button>
+      <div id="myModal" class="modal">
+        <div class="aboutFred">
+          <span class="close">&times;</span>
+          <p>Fred the Baker is tired of making real donuts and is ready to retire.</p>
+          <p> Help the neighborhood save Fred the Baker Baking Company by making virtual donuts!</p>
+        </div>
+      </div>
 
-<button id="reset-btn">reset</button>
+      <button id="inspiration">Inspiration</button>
+      <div id="myModal2" class="modal2">
+        <div class="inspirationCookie">
+          <span class="close2">&times;</span>
+          <p>My inspiration for this game was<a href="https://orteil.dashnet.org/cookieclicker/" </a> Cookie Clicker</p>
+        </div>
+      </div>
 
-</section>
-<section class="boosts">
 
-  <button id="buyAutoClicker"><img src=/images/autoClickBtn.png ></button>
-  <div id="autoCnt"><h3> AutoClickers: <span id="autoCntr">0</span></h3>  
- 
-  <div id="multiplierCountDisplay"><h3>Multiplier <span id="buyMultiplierBtn">0</span></h3>  
+      <button id="contact">Contact</button>
+      <div id="myModal3" class="modal3">
+        <div class="contactMe">
+          <span class="close3">&times;</span>
+          <p>Lyzz Hans, 2022</p>
+          <p>Find me on Github<a href="https://github.com/LyzzHans" </a> GitHub</p>
+          <p>Let's connect on LinkedIn <a href="https://www.linkedin.com/in/lyzzhans/" </a> LinkedIn</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <header class='Fred'>
+        <h1>
+          Fred the Baker Baking Company
+        </h1>
+      </header>
+      <h1>Donut Maker</h1>
+      <section class="counter">
+        <!-- <div id="countDonuts"> -->
+        <h3>Donut Count <span id="donutCount">0</span></h3>
+        <!-- </div> -->
+      </section>
+      <section class="buttons-section">
 
-  <button id="buyMultiplier"><img src=/images/multBtn.png ></button>
-</section>
+        <button id="bakeDonut"><img src=/images/blueDonut.png height="100" width="100"></button>
 
-<div class="navbar" id="myNavBar">
-  
-  <a href="#About">About</a>
-  <a href="#Inspiration">Inspiration</a>
-  <a href="#Contact">Contact</a>
 
-</div>
-    <script src="./donut-clicker-app.js"></script>
-</container>
+        <button id="reset-btn">reset</button>
 
-</main>
+      </section>
+      <section class="boosts">
+
+        <button id="buyAutoClicker"><img src=/images/autoClickBtn.png></button>
+        <div id="autoCnt">
+          <h3> AutoClickers: <span id="autoCntr">0</span></h3>
+
+          <div id="multiplierCountDisplay">
+            <h3>Multiplier <span id="buyMultiplierBtn">0</span></h3>
+
+            <button id="buyMultiplier"><img src=/images/multBtn.png></button>
+      </section>
+      <script src="./donut-clicker-app.js"></script>
+      </container>
+
+  </main>
 </body>
+
 </html>

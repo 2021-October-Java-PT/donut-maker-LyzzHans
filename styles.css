@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    justify-content: center;
 }
 
 a {
@@ -10,19 +9,20 @@ a {
     padding: .25rem .5rem;
     text-decoration: none;
 }
+
 body {
     background-image: url(images/skybkrnd.png);
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+    background-attachment: fixed;
+    background-position: center;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Righteous", sans-serif;
-    color: rgb(167, 52, 233);
-    justify-content: center;
+    color: rgb(233, 118, 52);
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,42 +35,62 @@ head {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+}
+
+boosts {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 
 }
 
 h1 {
+
     margin-top: 10px;
     margin-bottom: 10px;
-    justify-content: center;
     font-size: 27px;
-  }
-  
-  h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 22px;
-    justify-content: center;
-  
+
 
 }
-.buttons-section button{
+
+.buttons-section button {
     padding: 6px 12px;
     cursor: pointer;
-    
+
 }
-    .counter-board{
-        font-size: 30px;
-        justify-content: center;
-        flex-direction: column;
-    
-        align-items: center;
-    }
+
+.counter-board {
+    font-size: 30px;
+    justify-content: center;
+    flex-direction: column;
+
+    align-items: center;
+}
 
 
 
-.Fred {
+.header {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -81,21 +101,138 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.navbar {
-    overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  align-items:center;
-}
-  .donut_count {
+
+
+.donut_count {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
+
+a {
+    color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal3 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#about {
+    background-color: rgb(43, 226, 89);
+    font-size: larger;
+}
+
+#inspiration {
+    background-color: rgb(43, 226, 89);
+    font-size: larger;
+}
+
+#contact {
+    background-color: rgb(43, 226, 89);
+    font-size: larger;
+}
+
+.aboutFred {
+    background-color: white;
+    border-radius: 0.5em;
+    max-width: 600px;
+    padding: 2em;
+    margin: auto;
+}
+
+.inspirationCookie {
+
+    background-color: white;
+    border-radius: 0.5em;
+    max-width: 600px;
+    padding: 2em;
+    margin: auto;
+}
+
+.contactMe {
+    background-color: white;
+    border-radius: 0.5em;
+    max-width: 600px;
+    padding: 2em;
+     margin: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close3 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 767px) {
-    
+
     .profile {
         display: flex;
         align-items: center;
@@ -108,12 +245,15 @@ h1 {
         flex-direction: column;
         margin: 0;
     }
+
     @media screen and (max-width: 600px) {
-        .navbar a:not(:first-child) {display: none;}
-        .navbar a.icon {
-          float: right;
-          display: block;
+        .navbar a:not(:first-child) {
+            display: none;
         }
-      }
-      
+
+        .navbar a.icon {
+            float: right;
+            display: block;
+        }
+    }
 }

@@ -46,7 +46,6 @@ class DonutClicker {
       this.autoClicksCost = this.autoClicksCost * 1.1;
       this.autoClicks += 1;
 
-
     }
 
   }
