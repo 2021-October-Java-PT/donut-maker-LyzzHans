@@ -8,21 +8,20 @@ function renderPage() {
 }
 
 function bakeDonut() {
-
-
-
   const donutBtn = document.querySelector('#bakeDonut');
   const buyAutoClicker = document.querySelector('#buyAutoClicker');
   const donutCntDisp = document.querySelector('#donutCount');
   const buyMultiplier = document.querySelector('#buyMultiplier');
   const resetBtn = document.querySelector('#reset-btn');
-  const donutClicker = new DonutClicker(100, 0, 100, 0, 10);
   const autoCntDisp = document.querySelector('#autoCntr');
   const autoCostDisp = document.querySelector('#autoCostDisp');
   const multiCntDisp = document.querySelector('#buyMultiplierBtn')
 
+  const donutClicker = new DonutClicker(0, 0, 100, 1, 0, 10);
+
   donutBtn.addEventListener('click', () => {
     donutClicker.bakeDonut();
+    donutClicker.updateDonutCount;
     donutCntDisp.innerHTML = Math.round(donutClicker.donutCount);
     console.log(donutClicker.donutCount);
   });
