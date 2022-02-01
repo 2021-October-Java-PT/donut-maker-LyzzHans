@@ -1,17 +1,20 @@
 // const donutCount = document.querySelector(".donutCount");
-const donutCntDisp = document.querySelector("#donutCount");
-const autoCostDisp = document.querySelector('#autoCntr');
+const paraDonutCount = document.querySelector("#donutCount");
+const autoCostDisp = document.querySelector("#autoCntr");
+const currentDonutCount = document.querySelector('.currentDonutCount')
+
+
 class DonutClicker {
 
-  constructor(donutCount, autoClicks, autoClicksCost, multiplier, multiplierCost) {
-    this.donutCount = donutCount;
-    this.autoClicks = autoClicks;
-    this.autoClicksCost = autoClicksCost;
-    this.multiplierCount = multiplier;
-    this.multiplierCost = multiplierCost;
-
-
+  constructor(donutCount, autoClicks, autoClicksCost, multiplier, multiplierCount, multiplierCost) {
+    this.donutCount = 0;
+    this.autoClicks = 0;
+    this.autoClicksCost = 100;
+    this.multiplier = 1;
+    this.multiplierCount = 0;
+    this.multiplierCost = 10;
   }
+
   getDonutCount() {
     return this.donutCount;
   }
@@ -25,6 +28,9 @@ class DonutClicker {
   getMultiplier() {
     return this.multiplier;
   }
+  getMultiplierCount() {
+    return this.multiplierCount;
+  }
   getMultiplierCost() {
     return this.multiplierCost;
   }
@@ -32,33 +38,30 @@ class DonutClicker {
 
   bakeDonut() {
 
-    if (this.multiplierCount > 0) {
-      Math.round(this.donutCount += Math.pow(1.2, this.multiplierCount));
-    } else {
-      this.donutCount++;
-    }
+    this.donutCount += this.multiplier * 1;
+
   }
 
 
   buyAutoClicker() {
     if (this.donutCount >= this.autoClicksCost) {
       this.donutCount -= this.autoClicksCost;
-      this.autoClicksCost = this.autoClicksCost * 1.1;
       this.autoClicks += 1;
-
+      this.autoClicksCost *= 1.15;
+      let price = 0.1 * this.autoClicksCost;
+      this.autoClicksCost += price;
+      console.log(this.autoClicks);
+    
     }
-
-  }
-
-  autoClickFunction() {
     if (this.autoClicks >= 1) {
       setInterval(() => {
         console.log(this.donutCount);
-        this.donutCount += (1 * this.autoClicks);
-        autoCostDisp.innerText = this.autoClicks;
-        donutCntDisp.innerText = this.donutCount;
+        this.donutCount += this.autoClicks;
+        const count = document.querySelector('#donutCount');
+        count.innerText = this.donutCount;
       }, 1000);
-    }
+
+  }
   }
 
 
@@ -66,13 +69,15 @@ class DonutClicker {
 
     if (this.donutCount >= this.multiplierCost) {
       this.donutCount -= this.multiplierCost;
-
-
       this.multiplierCount += 1;
+      this.multiplierCost  *= 1.1;
+      this.multiplier *= 1.2;
     }
   }
+
+  updateDonutCount() {
+    paraDonutCount.innerText = bakedDonut.getDonutCount();
+  }
+
 }
-
-
-
 export default DonutClicker;

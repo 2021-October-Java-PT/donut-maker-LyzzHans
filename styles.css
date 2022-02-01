@@ -97,6 +97,7 @@ h2 {
 
 }
 
+
 .game {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
